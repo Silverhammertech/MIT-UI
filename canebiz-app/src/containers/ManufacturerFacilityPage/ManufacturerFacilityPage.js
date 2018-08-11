@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/_Aux/_Aux';
 
-class CultivatorFacilityPage extends Component {
+class ManufacturerFacilityPage extends Component {
     render () {
         return (
             <Aux>
               <div>FacilityLocation</div>
-              <div>FacilityLabStatus1</div>
-              <div>FacilityLabStatus2</div>
-              <div>Plant Catalog</div>
+              <div>FacilityStatus1</div>
+              <div>FacilityStatus2</div>
+              <div>Product Catalog</div>
               <div>Transaction History</div>
             </Aux>
         );
@@ -20,4 +20,4 @@ class CultivatorFacilityPage extends Component {
 
 
 
-  export default CultivatorFacilityPage; 
+export default ManufacturerFacilityPage; 

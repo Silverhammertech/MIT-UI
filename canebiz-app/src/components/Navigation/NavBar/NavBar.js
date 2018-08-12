@@ -1,21 +1,20 @@
 import React from 'react';
+import classes from './NavBar.css';
+import Logo from '../../Logo/Logo';
+import NavigationItems from '../NavigationItems/NavigationItems';
+import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
 
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-
-const NavBar = (props) => {
-    return(
-        <div>
-            <AppBar position="static">
-                <Toolbar>
-                    <Typography align='center' variant="title" color="inherit">
-                        {props.name}
-                    </Typography>
-                </Toolbar>
-            </AppBar>
+const NavBar = ( props ) => (
+    <header className={classes.NavBar}>
+        <DrawerToggle clicked={props.drawerToggleClicked} />
+        <div className={classes.Logo}>
+            <Logo />
         </div>
-    );
-}
+        <nav className={classes.DesktopOnly}>
+            <NavigationItems />
+        </nav>
+    </header>
+);
+
 
 export default NavBar;

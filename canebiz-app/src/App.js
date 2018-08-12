@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+//import CultivatorFacilityPage from './containers/CultivatorFacilityPage/CultivatorFacilityPage';
+import CanebizNexus from './containers/CanebizNexus/CanebizNexus';
 
-
-
-import Layout from './components/Layout/Layout';
-import CultivatorFacilityPage from './containers/CultivatorFacilityPage/CultivatorFacilityPage';
 
 class App extends Component {
   render () {
     return (
       <BrowserRouter>
       <div>
-        <Layout>
-          <CultivatorFacilityPage/>
-        </Layout>
+          {/* The Start Screen is Nexus, which we do not define in App */}
+        <CanebizNexus />
       </div>
       </BrowserRouter>
     );

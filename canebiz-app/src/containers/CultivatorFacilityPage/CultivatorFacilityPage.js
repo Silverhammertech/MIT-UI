@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+//import { Route } from 'react-router-dom';
 import Aux from '../../hoc/_Aux/_Aux';
-import NavBar from '../../components/Navigation/NavBar/NavBar';
+import Layout from '../../components/Layout/Layout';
 import LabStatusTile from '../../components/Cultivator/LabStatus/LabStatusTile';
 
 class CultivatorFacilityPage extends Component {
     render () {
         return (
             <Aux>
-                <div>
-                    <NavBar name="Cultivator" />
-                </div>
+                <Layout name="Cultivator" >
                 <div>
                     <LabStatusTile id="Lab1" temperature="74" />
                 </div>
@@ -19,6 +17,7 @@ class CultivatorFacilityPage extends Component {
               <div>FacilityLabStatus2</div>
               <div>Plant Catalog</div>
               <div>Transaction History</div>
+              </Layout>
             </Aux>
         );
     }

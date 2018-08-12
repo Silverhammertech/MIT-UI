@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
 import Layout from './components/Layout/Layout';
-import UserPage from './containers/UserPage/UserPage';
-import ManufacturerFacilityPage from './containers/ManufacturerFacilityPage/ManufacturerFacilityPage';
 import CultivatorFacilityPage from './containers/CultivatorFacilityPage/CultivatorFacilityPage';
 
 class App extends Component {
   render () {
     return (
+      <BrowserRouter>
       <div>
         <Layout>
-          <UserPage/>
           <CultivatorFacilityPage/>
-          <ManufacturerFacilityPage/>
         </Layout>
       </div>
+      </BrowserRouter>
     );
   }
 }

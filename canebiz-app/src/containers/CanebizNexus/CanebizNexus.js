@@ -17,7 +17,7 @@ class CanebizNexus extends Component {
                             <Route path="/" exact component={CanebizNexus} /> 
                             <Route path="/users" component={UserPage} />
                             <Route path="/cultivators" component={CultivatorFacilityPage} />
-                            <Route path="/manufacturers" component={ManufacturerFacilityPage} />
+                        <Route path="/manufacturers" component={ManufacturerFacilityPage} />
                              
                         </Switch>*/}
                     </Layout>

@@ -12,11 +12,10 @@ class CultivatorFacilityPage extends Component {
                 <div>
                     <LabStatusTile id="Lab1" temperature="74" />
                 </div>
-              <div>FacilityLocation</div>
-              <div>FacilityLabStatus1</div>
-              <div>FacilityLabStatus2</div>
-              <div>Plant Catalog</div>
-              <div>Transaction History</div>
+                <div>
+                    <LabStatusTile id="Lab2" temperature="71" />
+                </div>
+
               </Layout>
             </Aux>
         );

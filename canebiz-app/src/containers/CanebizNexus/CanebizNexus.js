@@ -14,6 +14,7 @@ class CanebizNexus extends Component {
                 <div>
                     <Layout name="Nexus">
                         <Switch>
+                            {/* /nexus is used as base screen, as Root / is App and there is no screen associated */}
                             <Route path="/nexus" exact component={CanebizNexus} /> 
                             <Route path="/users" component={UserPage} />
                             <Route path="/cultivators" component={CultivatorFacilityPage} />

@@ -5,6 +5,9 @@ import Layout from '../../components/Layout/Layout';
 import CultivatorFacilityPage from '../../containers/CultivatorFacilityPage/CultivatorFacilityPage';
 import UserPage from '../../containers/UserPage/UserPage';
 import ManufacturerFacilityPage from '../../containers/ManufacturerFacilityPage/ManufacturerFacilityPage';
+import { Link } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
+import ButtonBases from '../../components/Navigation/ButtonBases/ButtonBases';
 
 
 class CanebizNexus extends Component {
@@ -21,6 +24,13 @@ class CanebizNexus extends Component {
                             <Route path="/manufacturers" component={ManufacturerFacilityPage} />
                              
                         </Switch>
+                        <ButtonBases>
+                        <Route path="/cultivators" component={CultivatorFacilityPage} />
+                        Cultivator
+                        </ButtonBases>
+                        <Button component={Link} to="/cultivators">
+                        Cultivator
+                        </Button>
                     </Layout>
 
                 </div>

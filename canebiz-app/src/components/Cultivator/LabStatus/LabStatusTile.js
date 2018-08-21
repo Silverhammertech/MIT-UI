@@ -24,6 +24,7 @@ const styles = theme => ({
   card: {
 
     maxWidth: 400,
+    backgroundColor: '#8BC34A',
 
   },
 

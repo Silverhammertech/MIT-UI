@@ -5,8 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import SimpleTable from '../../../containers/ManufacturerFacilityPage/SimpleTable';
+import WeedSimpleTable from './WeedSimpleTable';
 
 const styles = {
   card: {
@@ -27,7 +26,7 @@ const styles = {
   },
 };
 
-function ProductCard(props) {
+function WeedProductCard(props) {
   const { classes } = props;
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -35,7 +34,7 @@ function ProductCard(props) {
     <Card className={classes.card}>
       <CardContent>
             <div className={classes.tableContainer}>
-              <SimpleTable />
+              <WeedSimpleTable />
             </div>
       </CardContent>
       <CardActions>
@@ -45,8 +44,8 @@ function ProductCard(props) {
   );
 }
 
-ProductCard.propTypes = {
+WeedProductCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductCard);
+export default withStyles(styles)(WeedProductCard);

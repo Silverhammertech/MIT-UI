@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/_Aux/_Aux';
-import TitlebarGridList from '../../components/Cultivator/GridList/GridList';
 
 
-class UserPage extends Component {
+
+class DistributionFacilityPage extends Component {
     render () {
         return (
             <Aux>
 
               <div>
-                  <TitlebarGridList />
+              console.log("DistributionFacilityPage");
               </div>
 
 
@@ -23,4 +23,4 @@ class UserPage extends Component {
 
 
 
-export default UserPage; 
+export default DistributionFacilityPage; 

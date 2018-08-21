@@ -22,15 +22,17 @@ class Layout extends Component {
     }
 
     render () {
+        
         return (
+            
             <Aux>
                 <NavBar name={this.props.name} drawerToggleClicked={this.sideDrawerToggleHandler} />
                 <SideDrawer
                     open={this.state.showSideDrawer}
                     closed={this.sideDrawerClosedHandler} />
                 <main className={classes.Content}>
-                    {this.props.children}
-                </main>
+                   {this.props.children}
+                </main> 
             </Aux>
         )
     }

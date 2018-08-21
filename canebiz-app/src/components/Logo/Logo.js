@@ -1,6 +1,6 @@
 import React from 'react';
 
-import canebizLogo from '../../assets/images/Marijuana-Leaf-Green.png';
+import canebizLogo from '../assets/images/Marijuana-Leaf-Green.png';
 import classes from './Logo.css';
 
 const logo = (props) => (

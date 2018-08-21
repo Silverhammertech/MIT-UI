@@ -9,7 +9,7 @@ class DistributionFacilityPage extends Component {
             <Aux>
 
               <div>
-              console.log("DistributionFacilityPage");
+              Console.log("DistributionFacilityPage");
               </div>
 
 

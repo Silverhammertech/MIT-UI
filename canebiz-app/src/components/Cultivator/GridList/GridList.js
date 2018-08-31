@@ -55,7 +55,7 @@ function TitlebarGridList(props) {
         </GridListTile>
         {tileData.map(tile => (
           <GridListTile key={tile.img}>
-            <img src={tile.img}  />
+            <img src={tile.img} alt="Missing" />
             <GridListTileBar
               title={tile.title}
               subtitle={<span>by: {tile.author}</span>}

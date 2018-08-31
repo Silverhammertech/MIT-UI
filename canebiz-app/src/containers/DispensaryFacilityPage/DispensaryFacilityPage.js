@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/_Aux/_Aux';
 
+
+import Layout from '../../components/Layout/Layout';
+import WeedProductCard from '../../components/Cultivator/WeedProductCard/WeedProductCard';
+import WeedProductTable from '../../components/Cultivator/WeedProductTable/WeedProductTable';
 
 
 class DispensaryFacilityPage extends Component {
     render () {
         return (
-            <Aux>
+            
+                <Layout name="Cultivator" >
+                
+                <div>
+                    <WeedProductCard id="id1" temperature="74" />
+                </div>
+                <div>
+                    <WeedProductCard id="id2" temperature="71" />
+                </div>
+            
+                <div>
+                    <WeedProductTable />
+                </div>
+            
+            
 
-              <div>
-              Console.log("DispensaryFacilityPage");
-              </div>
-
-
-            </Aux>
+              </Layout>
+            
         );
     }
 }
-
-
-
 
 
 

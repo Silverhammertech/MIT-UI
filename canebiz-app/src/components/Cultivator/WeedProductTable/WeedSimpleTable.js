@@ -40,12 +40,12 @@ function WeedSimpleTable(props) {
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell>Plant</TableCell>
+            <TableCell numeric>Plant</TableCell>
             <TableCell numeric>Units</TableCell>
             <TableCell numeric>Quantity in Stock</TableCell>
             <TableCell numeric>CBD %</TableCell>
-            <TableCell string>Primary Usage</TableCell>
-            <TableCell string> Plant Category</TableCell>
+            <TableCell numeric>Primary Usage</TableCell>
+            <TableCell numeric> Plant Category</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -55,11 +55,12 @@ function WeedSimpleTable(props) {
                 <TableCell component="th" scope="row">
                   {n.name}
                 </TableCell>
+                <TableCell numeric>Plant</TableCell>
                 <TableCell numeric>{n.Unit$}</TableCell>
                 <TableCell numeric>{n.StockQty}</TableCell>
                 <TableCell numeric>{n.CBD}</TableCell>
-                <TableCell string>{n.Purpose}</TableCell>
-                <TableCell string>{n.Category}</TableCell>
+                <TableCell numeric>{n.Purpose}</TableCell>
+                <TableCell numeric>{n.Category}</TableCell>
               </TableRow>
             );
           })}

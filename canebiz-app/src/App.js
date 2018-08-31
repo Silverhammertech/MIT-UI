@@ -7,6 +7,7 @@ import CultivatorFacilityPage from './containers/CultivatorFacilityPage/Cultivat
 import ManufacturerFacilityPage from './containers/ManufacturerFacilityPage/ManufacturerFacilityPage';
 import DistributionFacilityPage from './containers/DistributionFacilityPage/DistributionFacilityPage';
 import DispensaryFacilityPage from './containers/DispensaryFacilityPage/DispensaryFacilityPage';
+import PlantCatalog from './containers/PlantCatalog/PlantCatalog';
 import UserPage from './containers/UserPage/UserPage';
 import Aux from './hoc/_Aux/_Aux';
 import Layout from './components/Layout/Layout';
@@ -28,6 +29,7 @@ class App extends Component {
                             <Route path="/distributors" exact component={DistributionFacilityPage} />
                             <Route path="/dispensariess" exact component={DispensaryFacilityPage} />
                             <Route path="/canebizNexus" exact component={CanebizNexus} />
+                            <Route path="/plantcatalog" exact component={PlantCatalog} />
                        </Switch>
 
                 </div>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
-  CardSubtitle, CardBody } from 'reactstrap';
+  CardSubtitle, CardBody, CardFooter } from 'reactstrap';
 
 
 class WeedProductCard extends Component {
@@ -11,10 +11,11 @@ class WeedProductCard extends Component {
     render() {
 
     return (
-      <div>
+      <div >
+
         <Card>
 
-        <CardImg top width="100%" src="../../../../public/assets/images/white-rhino.jpg" alt="Card image cap" />
+        <CardImg top width="25%" src="../../assets/images/white-rhino.jpg" alt="Card image cap" />
         <CardBody>
           <CardTitle>{this.props.plant.name}</CardTitle>
           <CardSubtitle>{this.props.plant.city}</CardSubtitle>
@@ -22,8 +23,10 @@ class WeedProductCard extends Component {
           <CardText>{this.props.plant.intro_body}</CardText>
 
           <Button>Add to cart</Button>
+          <CardFooter>Footer</CardFooter>
         </CardBody>
       </Card>
+
       </div>
     );
   }

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from '../../../axios-weedprod';
 import WeedProductCard from '../../../components/Cultivator/WeedProductCard/WeedProductCard';
 import {Container, Row, Col } from 'reactstrap';
+import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
+    CardSubtitle, CardBody, CardFooter } from 'reactstrap';
+  
 
 
 class WeedProductCards extends Component {
@@ -77,13 +80,17 @@ class WeedProductCards extends Component {
       render() {
         let Weedproductcard = this.state.plants.map(plant => {
             return (
-                <Col sm="4">
+                <Container>
+                    <Row>
+                <Col xs="6" sm="4">
                 <WeedProductCard key={plant.id} plant={plant} />
                 </Col>
+                </Row>
+                </Container>
             )
         })
         return (
-            <Container fluid>
+            <Container>
             <Row>
                 {Weedproductcard}
             </Row>

@@ -1,30 +1,26 @@
 import React, { Component } from 'react';
-//import { Route } from 'react-router-dom';
-
+import Aux from '../../hoc/_Aux/_Aux';
 import Layout from '../../components/Layout/Layout';
-import LabStatusTile from '../../components/Cultivator/LabStatus/LabStatusTile';
+import FacilityLabs from './FacilityLabs';
 
 
 class CultivatorFacilityPage extends Component {
 
     render () {
         return (
-            
+            <Aux>
                 <Layout name="Cultivator" >
                 
                 <div>
-                    <LabStatusTile id="Lab1" temperature="74" />
+                    <FacilityLabs />
                 </div>
             
 
               </Layout>
-            
+            </Aux>
         );
     }
 }
-
-
-
 
 
 

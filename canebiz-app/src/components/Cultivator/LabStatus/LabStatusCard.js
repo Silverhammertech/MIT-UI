@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
 import classnames from 'classnames';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -16,17 +17,41 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import SimpleTable from '../../../containers/ManufacturerFacilityPage/SimpleTable';
+import LabStatusTable from './LabStatusTable';
+import Grid from '@material-ui/core/Grid';
 
 
 
 const styles = theme => ({
-
+  layout: {
+    width: 'auto',
+    marginLeft: theme.spacing.unit * 3,
+    marginRight: theme.spacing.unit * 3,
+    [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
+      width: 1100,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+  },
+  cardGrid: {
+    padding: `${theme.spacing.unit * 8}px 0`,
+  },
   card: {
-
+    height: '50%',
     maxWidth: 400,
     backgroundColor: '#8BC34A',
-
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  cardMedia: {
+    paddingTop: '56.25%', // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing.unit * 6,
   },
 
   media: {
@@ -55,7 +80,7 @@ const styles = theme => ({
 
     marginLeft: 'auto',
 
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('lg')]: {
 
       marginRight: -8,
 
@@ -103,10 +128,10 @@ class LabStatusCard extends Component {
 
 
     return (
+<div className={classNames(classes.layout, classes.cardGrid)}>
 
-      <div>
 
-        <Card className={classes.card}>
+        <Card>>
 
           <CardHeader
 
@@ -130,9 +155,9 @@ class LabStatusCard extends Component {
 
             }
 
-            title={this.props.lab.cultivator}
+            title={this.props.lab.name}
 
-            subheader="Subhead"
+            subheader={this.props.lab.purpose}
 
           />
 
@@ -147,8 +172,8 @@ class LabStatusCard extends Component {
           />
 
           <CardContent>
-          <div className={classes.tableContainer}>
-              <SimpleTable />
+            <div className={classes.tableContainer}>
+              <LabStatusTable elem={this.props}/>
             </div>
 
             <Typography component="p">
@@ -223,7 +248,6 @@ class LabStatusCard extends Component {
           </Collapse>
 
         </Card>
-
       </div>
 
     );

@@ -75,7 +75,6 @@ class WeedProductCards extends Component {
             } );
     }
 
-
       render() {
         let Weedproductcard = this.state.plants.map(plant => {
             return (

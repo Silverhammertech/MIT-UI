@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/_Aux/_Aux';
-import TitlebarGridList from '../../components/Cultivator/GridList/GridList';
+import GoogleMapsContainer from '../Mapping/GoogleMapsContainer';
 
 
 class UserPage extends Component {
@@ -9,7 +9,7 @@ class UserPage extends Component {
             <Aux>
 
               <div>
-                  <TitlebarGridList />
+                  <GoogleMapsContainer/>
               </div>
 
 

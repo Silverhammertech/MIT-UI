@@ -45,13 +45,13 @@ class GoogleMapsContainer extends React.Component {
         style = { style }
         google = { this.props.google }
         onClick = { this.onMapClick }
-        zoom = { 14 }
-        initialCenter = {{ lat: 39.648209, lng: -75.711185 }}
+        zoom = { 10 }
+        initialCenter = {{ lat: 33.957239, lng: -118.29120 }}
       >
         <Marker
           onClick = { this.onMarkerClick }
           title = { 'Changing Colors Garage' }
-          position = {{ lat: 39.648209, lng: -75.711185 }}
+          position = {{ lat: 33.957239, lng: -118.29120 }}
           name = { 'Changing Colors Garage' }
         />
         <InfoWindow
@@ -79,10 +79,10 @@ class GoogleMapsContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyDh_FpruT6VXwjqowwDbcA09xK2A2Yg9TM",
+  apiKey: "AIzaSyA7qd5iEaogjGOJ4Y6pJuF7EyEqgtouJlc",
 })(GoogleMapsContainer);
 
 
 {/* export default GoogleApiWrapper({
-    api: (process.env.AIzaSyDUDXsmccwu4Qi-IAtVryKR14_k3BcYC1U)
+    api: (process.env.AIzaSyDh_FpruT6VXwjqowwDbcA09xK2A2Yg9TM)
 })(GoogleMapsContainer) */}

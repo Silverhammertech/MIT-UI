@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/_Aux/_Aux';
 import GoogleMapsContainer from '../Mapping/GoogleMapsContainer';
+import BusinessInfoCards from '../../components/Cultivator/WeedProductCards/WeedProductCards';
 
 
 class UserPage extends Component {
@@ -10,6 +11,7 @@ class UserPage extends Component {
 
               <div>
                   <GoogleMapsContainer/>
+                  <BusinessInfoCards  />
               </div>
 
 

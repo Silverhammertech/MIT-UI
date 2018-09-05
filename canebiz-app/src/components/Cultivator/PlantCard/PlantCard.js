@@ -70,7 +70,7 @@ function PlantCard(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-
+    console.log(props);
       <main>
         {/* Hero unit */}
         <div className={classes.heroUnit}>
@@ -106,7 +106,7 @@ function PlantCard(props) {
                   <CardMedia
                     className={classes.cardMedia}
                     image="../../assets/images/Karma.jpg"
-                    title="Weed Description TBA"
+                    title="hello"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="headline" component="h2">

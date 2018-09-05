@@ -31,10 +31,10 @@ class PlantCards extends Component {
 
         axios.get( 'https://plantcatalog-836e7.firebaseio.com/canabisplants.json')
             .then( res => {
-                const weeds = res.data;
+    
                 console.log(res.data);
                 this.setState( { plants: res.data.canabisplants } );
-                console.log( {weeds} );
+
             } )
             .catch( error => {
                 console.log( error );
@@ -43,16 +43,11 @@ class PlantCards extends Component {
     }
 
       render() {
-        let Plantcard = this.state.weeds.map(plant => {
             return (
-<div>
-                <PlantCard key={plant.plantid} plant={plant} />
-</div>
+
+                <PlantCard items={this.state.weeds} />
+
             )
-        })
-        return (
-                {Plantcard}
-        )
         }
     }
 

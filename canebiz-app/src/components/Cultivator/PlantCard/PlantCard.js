@@ -45,6 +45,7 @@ const styles = theme => ({
   cardGrid: {
     padding: `${theme.spacing.unit * 8}px 0`,
   },
+
   card: {
     height: '100%',
     display: 'flex',
@@ -62,15 +63,18 @@ const styles = theme => ({
   },
 });
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+{/* const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; */}
 
 function PlantCard(props) {
+  console.log( props.items);
   const { classes } = props;
+  let cards = props.items;
+  console.log(cards);
 
   return (
     <React.Fragment>
       <CssBaseline />
-    console.log(props);
+
       <main>
         {/* Hero unit */}
         <div className={classes.heroUnit}>
@@ -79,7 +83,7 @@ function PlantCard(props) {
               Plant Catalog
             </Typography>
             <Typography variant="title" align="center" color="textSecondary" paragraph>
-              Please browse below to see the Canabis plants we currently have in stock for all your recreational and medicinal purposes
+              Please browse below to see the Canabis plants we currently have in stock for all your recreational and medicinal purposes.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={16} justify="center">
@@ -101,19 +105,19 @@ function PlantCard(props) {
           {/* End hero unit */}
           <Grid container spacing={40}>
             {cards.map(card => (
-              <Grid item key={card} sm={6} md={4} lg={3}>
+              <Grid item key={cards.id} sm={6} md={4} lg={3}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="../../assets/images/Karma.jpg"
-                    title="hello"
-                  />
+                    image={card.img}
+                    title={card.data.category}
+                        />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="headline" component="h2">
-                      Weed Product
+                    {card.name}
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the content.
+                    {card.introduction}
                     </Typography>
                   </CardContent>
                   <CardActions>

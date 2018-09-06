@@ -139,7 +139,7 @@ class LabStatusCard extends Component {
 
               <Avatar aria-label="Cultivation Lab" className={classes.avatar}>
 
-                LAB
+                {this.props.lab.labtemp}
 
               </Avatar>
 

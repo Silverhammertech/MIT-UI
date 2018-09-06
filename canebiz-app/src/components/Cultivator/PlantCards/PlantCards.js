@@ -33,7 +33,7 @@ class PlantCards extends Component {
             .then( res => {
     
                 console.log(res.data);
-                this.setState( { plants: res.data.canabisplants } );
+                this.setState( { weeds: res.data} );
 
             } )
             .catch( error => {
@@ -45,7 +45,7 @@ class PlantCards extends Component {
       render() {
             return (
 
-                <PlantCard items={this.state.weeds} />
+                <PlantCard key={this.state.weeds.id} items={this.state.weeds} />
 
             )
         }

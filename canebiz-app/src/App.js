@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import CanebizNexus from './containers/CanebizNexus/CanebizNexus';
 import CultivatorFacilityPage from './containers/CultivatorFacilityPage/CultivatorFacilityPage';
+import CultivatorDashboard from './containers/CultivatorFacilityPage/CultivatorDashboard';
 import ManufacturerFacilityPage from './containers/ManufacturerFacilityPage/ManufacturerFacilityPage';
 import DistributionFacilityPage from './containers/DistributionFacilityPage/DistributionFacilityPage';
 import DispensaryFacilityPage from './containers/DispensaryFacilityPage/DispensaryFacilityPage';
@@ -25,6 +26,7 @@ class App extends Component {
                             
                             <Route path="/users" exact component={UserPage} />
                             <Route path="/cultivators" exact component={CultivatorFacilityPage} />
+                            <Route path="/cultivatorsdash" exact component={CultivatorDashboard} />
                             <Route path="/manufacturers" exact component={ManufacturerFacilityPage} />
                             <Route path="/distributors" exact component={DistributionFacilityPage} />
                             <Route path="/dispensariess" exact component={DispensaryFacilityPage} />

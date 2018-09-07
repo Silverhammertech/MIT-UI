@@ -7,6 +7,7 @@ const navigationItems = () => (
         <NavigationItem link="/" exact>Home</NavigationItem>
         <NavigationItem link="/users">User</NavigationItem>
         <NavigationItem link="/cultivators">Cultivator</NavigationItem>
+        <NavigationItem link="/cultivatorsdash">CultivatorDash</NavigationItem>
         <NavigationItem link="/manufacturers">Manufacturer</NavigationItem>
         <NavigationItem link="/distrubutors">Distributors</NavigationItem>
         <NavigationItem link="/dispensaries">Dispensaries</NavigationItem>

@@ -70,11 +70,11 @@ class FacilityLabs extends Component {
 
     componentDidMount () {
 
-        axios.get( 'https://cultivatorlabs-663cc.firebaseio.com/labstatus/0/Labs.json' )
+        axios.get( 'https://cultivatorlabs-663cc.firebaseio.com/labstatus/0.json' )
             .then( res => {
                 const labs = res.data;
                 console.log(res.data);
-                this.setState( { labs: res.data } );
+                this.setState( { labs: res.data.Labs } );
                 console.log( {labs} );
             } )
             .catch( error => {

@@ -5,6 +5,8 @@
   "dependencies": {
     "@material-ui/core": "^1.4.3",
     "@material-ui/icons": "^2.0.1",
+    "@mdi/font": "^2.7.94",
+    "@mdi/react": "^1.0.1",
     "ajv": "^6.5.3",
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
@@ -48,6 +50,7 @@
     "react-dom": "^16.4.2",
     "react-leaflet": "^2.0.1",
     "react-linechart": "^1.1.12",
+    "react-mdl": "^1.11.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "reactdom": "^2.0.0",

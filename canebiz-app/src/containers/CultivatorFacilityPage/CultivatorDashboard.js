@@ -4,13 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import PhoneIcon from '@material-ui/icons/Phone';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
-import HelpIcon from '@material-ui/icons/Help';
-import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
-import ThumbDown from '@material-ui/icons/ThumbDown';
-import ThumbUp from '@material-ui/icons/ThumbUp';
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import Typography from '@material-ui/core/Typography';
 import LabManager from '../../components/Cultivator/LabManager/LabManager';
 
@@ -59,22 +53,22 @@ class CultivatorDashboard extends React.Component {
             indicatorColor="primary"
             textColor="primary"
           >
-            <Tab label="Item One" icon={<PhoneIcon />} />
-            <Tab label="Item Two" icon={<FavoriteIcon />} />
-            <Tab label="Item Three" icon={<PersonPinIcon />} />
-            <Tab label="Item Four" icon={<HelpIcon />} />
-            <Tab label="Item Five" icon={<ShoppingBasket />} />
-            <Tab label="Item Six" icon={<ThumbDown />} />
-            <Tab label="Item Seven" icon={<ThumbUp />} />
+            <Tab label="Facility One" icon={<BusinessCenterIcon />} />
+            <Tab label="Facility Two" icon={<BusinessCenterIcon />} />
+            <Tab label="Facility Three" icon={<BusinessCenterIcon />} />
+            <Tab label="Facility Four" icon={<BusinessCenterIcon />} />
+            <Tab label="Facility Five" icon={<BusinessCenterIcon />} />
+            <Tab label="Facility Six" icon={<BusinessCenterIcon />} />
+            <Tab label="Facility Seven" icon={<BusinessCenterIcon />} />
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer><LabManager /></TabContainer>}
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
-        {value === 2 && <TabContainer>Item Three</TabContainer>}
-        {value === 3 && <TabContainer>Item Four</TabContainer>}
-        {value === 4 && <TabContainer>Item Five</TabContainer>}
-        {value === 5 && <TabContainer>Item Six</TabContainer>}
-        {value === 6 && <TabContainer>Item Seven</TabContainer>}
+        {value === 1 && <TabContainer>Facility Two</TabContainer>}
+        {value === 2 && <TabContainer>Facility Three</TabContainer>}
+        {value === 3 && <TabContainer>Facility Four</TabContainer>}
+        {value === 4 && <TabContainer>Facility Five</TabContainer>}
+        {value === 5 && <TabContainer>Facility Six</TabContainer>}
+        {value === 6 && <TabContainer>Facility Seven</TabContainer>}
       </div>
     );
   }

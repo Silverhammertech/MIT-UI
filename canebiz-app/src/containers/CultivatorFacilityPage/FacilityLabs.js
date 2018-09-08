@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import LabStatusCard from '../../components/Cultivator/LabStatus/LabStatusCard';
  
 import axios from '../../axios-weedprod'; 
-import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
-  CardSubtitle, CardBody, CardFooter } from 'reactstrap';
-  import Grid from '@material-ui/core/Grid';
+
+
 
 
 

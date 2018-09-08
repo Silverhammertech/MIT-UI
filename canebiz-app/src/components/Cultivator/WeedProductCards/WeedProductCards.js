@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import axios from '../../../axios-weedprod';
 import WeedProductCard from '../../../components/Cultivator/WeedProductCard/WeedProductCard';
 import {Container, Row, Col } from 'reactstrap';
-import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
-    CardSubtitle, CardBody, CardFooter } from 'reactstrap';
+
   
 
 

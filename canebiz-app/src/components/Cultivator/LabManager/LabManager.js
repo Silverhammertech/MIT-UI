@@ -2,14 +2,18 @@ import React, { Component } from 'react';
 import axios from '../../../axios-weedprod';
 import LabCard from '../../../components/Cultivator/LabManager/LabCard';
 
-import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
-    CardSubtitle, CardBody, CardFooter } from 'reactstrap';
+
   
 
-
+        {/* Need to add flocation with long,lat as well?  */}
 class LabManager extends Component {
  
         state = {
+        cid: "CULT1",
+        cultivatorname: "Dummy Cult LLC",
+        facilityid: "Facilty1",
+        facilityname : "Dummy Facility",
+
         labs: [
             {
 
@@ -74,6 +78,7 @@ class LabManager extends Component {
     
                 console.log(res.data);
                 this.setState( { labs: res.data.Labs} );
+                this.setState( {facilityname: res.data.facilityname});
 
             } )
             .catch( error => {
@@ -85,7 +90,7 @@ class LabManager extends Component {
       render() {
             return (
 
-                <LabCard key={this.state.labs.id} items={this.state.labs} />
+                <LabCard key={this.state.labs.id} items={this.state.labs} facilityname={this.state.facilityname}/>
 
             )
         }

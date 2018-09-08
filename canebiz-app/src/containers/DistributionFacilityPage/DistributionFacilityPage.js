@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 
 import Layout from '../../components/Layout/Layout';
-import WeedProductCard from '../../components/Cultivator/WeedProductCard/WeedProductCard';
 
 
 

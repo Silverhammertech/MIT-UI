@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
@@ -22,6 +18,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -32,9 +29,13 @@ const styles = theme => ({
       table: {
         minWidth: 700,
       },
-  appBar: {
-    position: 'relative',
-  },
+      margin: {
+        margin: theme.spacing.unit * 2,
+      },
+      padding: {
+        padding: `0 ${theme.spacing.unit * 2}px`,
+      },
+
   icon: {
     marginRight: theme.spacing.unit * 2,
   },
@@ -85,7 +86,7 @@ function LabCard(props) {
   console.log( props.items);
   const { classes } = props;
   let cards = props.items;
-  console.log(cards);
+  console.log(props);
 
   return (
     <React.Fragment>
@@ -96,7 +97,7 @@ function LabCard(props) {
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
             <Typography variant="display3" align="center" color="textPrimary" gutterBottom>
-              Facility Labs
+              {props.facilityname}
             </Typography>
             <Typography variant="title" align="center" color="textSecondary" paragraph>
               Please browse below to see the Canabis plants we currently have in stock for all your recreational and medicinal purposes.
@@ -126,7 +127,7 @@ function LabCard(props) {
           {/* End hero unit */}
           <Grid container spacing={40}>
             {cards.map(card => (
-              <Grid item key={cards.id} sm={20} md={10} lg={6}>
+              <Grid item key={cards.id} sm={12} md={10} lg={6}>
                 <Card className={classes.card}>
 
                     <CardHeader
@@ -181,13 +182,16 @@ function LabCard(props) {
                   </CardContent>
                  
                   <CardActions>
-                    <Button size="small" color="primary">
+                  <Badge color="secondary" badgeContent={Math.trunc(Math.random() *10)} className={classes.margin}>              
+                    <Button variant="contained" size="small" color="primary">
                       View Orders
                     </Button>
-                    <Button size="small" color="primary">
+                  </Badge> 
+                  <Badge color="secondary" badgeContent={Math.trunc(Math.random() *10)} className={classes.margin}> 
+                    <Button variant="contained" size="small" color="primary">
                       View Alerts
                     </Button>
-                    
+                    </Badge>   
                   </CardActions>
                 </Card>
               </Grid>

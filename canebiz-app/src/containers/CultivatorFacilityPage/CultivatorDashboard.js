@@ -12,6 +12,8 @@ import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import ThumbDown from '@material-ui/icons/ThumbDown';
 import ThumbUp from '@material-ui/icons/ThumbUp';
 import Typography from '@material-ui/core/Typography';
+import LabManager from '../../components/Cultivator/LabManager/LabManager';
+
 
 function TabContainer(props) {
   return (
@@ -66,7 +68,7 @@ class CultivatorDashboard extends React.Component {
             <Tab label="Item Seven" icon={<ThumbUp />} />
           </Tabs>
         </AppBar>
-        {value === 0 && <TabContainer>Item One</TabContainer>}
+        {value === 0 && <TabContainer><LabManager /></TabContainer>}
         {value === 1 && <TabContainer>Item Two</TabContainer>}
         {value === 2 && <TabContainer>Item Three</TabContainer>}
         {value === 3 && <TabContainer>Item Four</TabContainer>}

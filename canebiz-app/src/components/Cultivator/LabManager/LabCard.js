@@ -25,6 +25,7 @@ const styles = theme => ({
     root: {
         width: '100%',
         overflowX: 'auto',
+        backgroundColor: 'lightsteelblue',
       },
       table: {
         minWidth: 700,
@@ -68,6 +69,7 @@ const styles = theme => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    backgroundcolor: "lightblue",
   },
   cardMedia: {
     paddingTop: '56.25%', // 16:9
@@ -75,10 +77,7 @@ const styles = theme => ({
   cardContent: {
     flexGrow: 1,
   },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing.unit * 6,
-  },
+
 });
 
 
@@ -103,7 +102,7 @@ function LabCard(props) {
               Please browse below to see the Canabis plants we currently have in stock for all your recreational and medicinal purposes.
             </Typography>
             <div className={classes.heroButtons}>
-              <Grid container spacing={16} justify="center">
+              <Grid container spacing={16} justify="center" >
                 <Grid item>
                   <Button variant="contained" color="primary">
                     Add New Lab

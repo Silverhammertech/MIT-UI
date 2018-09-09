@@ -22,6 +22,12 @@ const styles = theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  card: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+    backgroundcolor: 'gray',
+  },
 });
 
 function UserPage(props) {
@@ -30,15 +36,16 @@ function UserPage(props) {
   return (
     <div className={classes.root}>
       <Grid container spacing={24}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}><GoogleMapsContainer/></Paper>
-          <FindBusinesses/>
+
+        <Grid item xs={6}>
+          <Card className={classes.card}><FindBusinesses/></Card>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+
+          <Card >
+            <GoogleMapsContainer/>
+          </Card>
+
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}>xs=3</Paper>

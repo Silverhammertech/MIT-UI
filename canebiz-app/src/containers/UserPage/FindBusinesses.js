@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import axios from '../../axios-weedprod'; 
 import SimpleTable from './SimpleTable';
-
+import EnhancedTable from './EnhancedTable';
 
 
 
@@ -126,7 +126,7 @@ class FindBusinesses extends Component {
         {
             return (
 
-                <SimpleTable key={this.state.rows.id} items={this.state.rows} />
+                <EnhancedTable key={this.state.rows.id} items={this.state.rows} />
 
             )
         }

@@ -18,15 +18,15 @@ const styles = theme => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * 1,
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    height: '700px',
   },
   card: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * 1,
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    backgroundcolor: 'gray',
   },
 });
 
@@ -35,18 +35,17 @@ function UserPage(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={24}>
+      <Grid container spacing={12}>
+      <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <GoogleMapsContainer/>
+          </Paper>
+        </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Card className={classes.card}><FindBusinesses/></Card>
         </Grid>
-        <Grid item xs={6}>
 
-          <Card >
-            <GoogleMapsContainer/>
-          </Card>
-
-        </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}>xs=3</Paper>
         </Grid>

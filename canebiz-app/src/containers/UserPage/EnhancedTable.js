@@ -386,7 +386,7 @@ const styles = theme => ({
 
   table: {
 
-    minWidth: 1020,
+    minWidth: 800,
 
   },
 

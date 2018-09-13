@@ -81,11 +81,15 @@ const styles = theme => ({
 });
 
 
+
 function LabCard(props) {
   console.log( props.items);
   const { classes } = props;
   let cards = props.items;
   console.log(props);
+  let onShow = false;
+
+
 
   return (
     <React.Fragment>

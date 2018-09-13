@@ -12,6 +12,7 @@ import PlantCatalog from './containers/PlantCatalog/PlantCatalog';
 import UserPage from './containers/UserPage/UserPage';
 import Aux from './hoc/_Aux/_Aux';
 import Layout from './components/Layout/Layout';
+import Blog from './components/Blog/Blog';
 
 class App extends Component {
   render () {
@@ -32,6 +33,7 @@ class App extends Component {
                             <Route path="/dispensariess" exact component={DispensaryFacilityPage} />
                             <Route path="/canebizNexus" exact component={CanebizNexus} />
                             <Route path="/plantcatalog" exact component={PlantCatalog} />
+                            <Route path="/caneblog" exact component={Blog} />
                        </Switch>
 
                 </div>

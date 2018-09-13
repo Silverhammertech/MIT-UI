@@ -13,6 +13,7 @@ const navigationItems = () => (
         <NavigationItem link="/dispensaries">Dispensaries</NavigationItem>
         <NavigationItem link="/CanebizNexus">CanebizNexus</NavigationItem>
         <NavigationItem link="/PlantCatalog">PlantCatalog</NavigationItem>
+        <NavigationItem link="/caneblog">CaneBlog</NavigationItem>
 
         
     </ul>

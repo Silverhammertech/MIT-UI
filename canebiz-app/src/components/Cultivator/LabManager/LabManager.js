@@ -12,7 +12,7 @@ class LabManager extends Component {
         cid: "CULT1",
         cultivatorname: "Dummy Cult LLC",
         facilityid: "Facilty1",
-        facilityname : "Dummy Facility",
+        facilityname : "",
 
         labs: [
             {

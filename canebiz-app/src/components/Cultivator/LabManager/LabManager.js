@@ -72,8 +72,11 @@ class LabManager extends Component {
     }
 
     componentDidMount () {
-
-        axios.get( 'https://cultivatorlabs-663cc.firebaseio.com/labstatus/0.json')
+        // Yse :facility in url and set axios response type to JSON
+        console.log(this.props.facility);
+        if (this.props.facility==="FID-1")
+        { 
+            axios.get( 'https://cultivatorlabs-663cc.firebaseio.com/labstatus/0.json')
             .then( res => {
     
                 console.log(res.data);
@@ -85,8 +88,23 @@ class LabManager extends Component {
                 console.log( error );
                 // this.setState({error: true});
             } );
-    }
+        }
+        else
+        { 
+            axios.get( 'https://cultivatorlabs-663cc.firebaseio.com/labstatus/1.json')
+            .then( res => {
+    
+                console.log(res.data);
+                this.setState( { labs: res.data.Labs} );
+                this.setState( {facilityname: res.data.facilityname});
 
+            } )
+            .catch( error => {
+                console.log( error );
+                // this.setState({error: true});
+            } );
+        }
+    }
       render() {
             return (
 

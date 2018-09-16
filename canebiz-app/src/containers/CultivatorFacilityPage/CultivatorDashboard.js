@@ -62,8 +62,8 @@ class CultivatorDashboard extends React.Component {
             <Tab label="Facility Seven" icon={<BusinessCenterIcon />} />
           </Tabs>
         </AppBar>
-        {value === 0 && <TabContainer><LabManager /></TabContainer>}
-        {value === 1 && <TabContainer>Facility Two</TabContainer>}
+        {value === 0 && <TabContainer><LabManager facility={"FID-1"}/></TabContainer>}
+        {value === 1 && <TabContainer><LabManager facility={"FID-2"}/></TabContainer>}
         {value === 2 && <TabContainer>Facility Three</TabContainer>}
         {value === 3 && <TabContainer>Facility Four</TabContainer>}
         {value === 4 && <TabContainer>Facility Five</TabContainer>}

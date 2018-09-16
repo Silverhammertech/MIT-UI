@@ -43,7 +43,7 @@ function UserPage(props) {
         </Grid>
 
         <Grid item xs={12}>
-          <Card className={classes.card}><FindBusinesses/></Card>
+          <Card className={classes.card}><FindBusinesses /></Card>
         </Grid>
 
         <Grid item xs={3}>

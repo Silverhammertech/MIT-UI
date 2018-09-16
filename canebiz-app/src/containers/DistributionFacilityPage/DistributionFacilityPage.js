@@ -14,9 +14,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import classNames from 'classnames';
 import Typography from '@material-ui/core/Typography';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import SearchTable from './SearchTable';
+
 
 const styles = theme => ({
   root: {
@@ -615,14 +614,22 @@ class DistributionFacilityPage extends Component {
             </Grid>
 
             <Grid container justify='center' toppadding='50px'>
-            <Grid item>
+            <Grid item > 
                                   <Button variant="outlined" color="primary" onClick={ () => this.manageSearch(1)}>
                                   Combined Search
                                 </Button>
                                 </Grid></Grid>
           </Paper>
+
+
         </Grid>
-        
+        <Paper className={classes.control}>
+<Grid container justify='center' >  
+                <Grid item xs={12}>
+          <Card className={classes.card}><SearchTable key={this.state.matches.plantid} items={this.state.matches}/></Card>
+        </Grid>
+        </Grid>
+        </Paper>
       </div>
       
     );

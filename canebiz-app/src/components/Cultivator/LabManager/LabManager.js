@@ -11,7 +11,7 @@ class LabManager extends Component {
         state = {
         cid: "CULT1",
         cultivatorname: "Dummy Cult LLC",
-        facilityid: "Facilty1",
+        facilityid: "FID-1",
         facilityname : "",
 
         labs: [

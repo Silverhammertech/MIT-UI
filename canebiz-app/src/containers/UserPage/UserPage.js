@@ -35,7 +35,7 @@ function UserPage(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={12}>
+      <Grid container spacing={16}>
       <Grid item xs={12}>
           <Paper className={classes.paper}>
             <GoogleMapsContainer/>

@@ -20,6 +20,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
     root: {
@@ -87,7 +88,11 @@ function LabCard(props) {
   const { classes } = props;
   let cards = props.items;
   console.log(props);
-  let onShow = false;
+  const AlertsLink = props => <Link to="/alerts" {...props} />;
+  const OrdersLink = props => <Link to="/orders" {...props} />;
+  const ordercount = Math.trunc(Math.random() *10);
+  const alertcount = Math.trunc(Math.random() *10);
+
 
 
 
@@ -130,7 +135,7 @@ function LabCard(props) {
           {/* End hero unit */}
           <Grid container spacing={40}>
             {cards.map(card => (
-              <Grid item key={cards.id} sm={12} md={10} lg={6}>
+              <Grid item key={cards.pid} sm={12} md={10} lg={6}>
                 <Card className={classes.card}>
 
                     <CardHeader
@@ -183,15 +188,15 @@ function LabCard(props) {
       </Table> </Paper>
 
                   </CardContent>
-                 
+
                   <CardActions>
-                  <Badge color="secondary" badgeContent={Math.trunc(Math.random() *10)} className={classes.margin}>              
-                    <Button variant="contained" size="small" color="primary">
+                  <Badge color="secondary" badgeContent={card.orderalert} className={classes.margin}>              
+                    <Button variant="contained" size="small" color="primary" component={OrdersLink }>
                       View Orders
                     </Button>
                   </Badge> 
-                  <Badge color="secondary" badgeContent={Math.trunc(Math.random() *10)} className={classes.margin}> 
-                    <Button variant="contained" size="small" color="primary">
+                  <Badge alertcount color="secondary" badgeContent={card.labalert} className={classes.margin}> 
+                    <Button variant="contained" size="small" color="primary" component={ AlertsLink}>
                       View Alerts
                     </Button>
                     </Badge>   

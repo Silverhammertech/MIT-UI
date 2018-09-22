@@ -56,7 +56,6 @@ function desc(a, b, orderBy) {
     return 1;
 
   }
-
   return 0;
 
 }

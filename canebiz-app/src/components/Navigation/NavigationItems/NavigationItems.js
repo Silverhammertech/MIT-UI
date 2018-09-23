@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './NavigationItems.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
+
 const navigationItems = () => (
     <ul className={classes.NavigationItems}>
         <NavigationItem link="/" exact>Home</NavigationItem>
@@ -14,6 +15,7 @@ const navigationItems = () => (
         <NavigationItem link="/CanebizNexus">CanebizNexus</NavigationItem>
         <NavigationItem link="/PlantCatalog">PlantCatalog</NavigationItem>
         <NavigationItem link="/caneblog">CaneBlog</NavigationItem>
+        <NavigationItem link="/canechat">CanaChat</NavigationItem>
 
         
     </ul>

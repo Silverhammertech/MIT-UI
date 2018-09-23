@@ -13,6 +13,7 @@ import UserPage from './containers/UserPage/UserPage';
 import Aux from './hoc/_Aux/_Aux';
 import Layout from './components/Layout/Layout';
 import Blog from './components/Blog/Blog';
+import CanaChat from './containers/CanaChat/CanaChat';
 
 class App extends Component {
   render () {
@@ -34,6 +35,7 @@ class App extends Component {
                             <Route path="/canebizNexus" exact component={CanebizNexus} />
                             <Route path="/plantcatalog" exact component={PlantCatalog} />
                             <Route path="/caneblog" exact component={Blog} />
+                            <Route path="/canechat" exact component={CanaChat} />
                        </Switch>
 
                 </div>

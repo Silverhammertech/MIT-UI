@@ -90,8 +90,7 @@ function LabCard(props) {
   console.log(props);
   const AlertsLink = props => <Link to="/alerts" {...props} />;
   const OrdersLink = props => <Link to="/orders" {...props} />;
-  const ordercount = Math.trunc(Math.random() *10);
-  const alertcount = Math.trunc(Math.random() *10);
+
 
 
 
@@ -191,12 +190,12 @@ function LabCard(props) {
 
                   <CardActions>
                   <Badge color="secondary" badgeContent={card.orderalert} className={classes.margin}>              
-                    <Button variant="contained" size="small" color="primary" component={OrdersLink }>
+                    <Button variant="contained" size="small" color="primary" component={OrdersLink}>
                       View Orders
                     </Button>
                   </Badge> 
-                  <Badge alertcount color="secondary" badgeContent={card.labalert} className={classes.margin}> 
-                    <Button variant="contained" size="small" color="primary" component={ AlertsLink}>
+                  <Badge color="secondary" badgeContent={card.labalert} className={classes.margin}> 
+                    <Button variant="contained" size="small" color="primary" component={AlertsLink}>
                       View Alerts
                     </Button>
                     </Badge>   

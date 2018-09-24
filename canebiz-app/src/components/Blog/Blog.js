@@ -199,7 +199,7 @@ function Blog(props) {
                   <Hidden xsDown>
                     <CardMedia
                       className={classes.cardMedia}
-                      image="../assets/images/How_to_Start_a_Marijuana_Dispensary.png"
+                      image="../../../public/assets/images/How_to_Start_a_Marijuana_Dispensary.png"
                       title="Dispensary"
                     />
                   </Hidden>

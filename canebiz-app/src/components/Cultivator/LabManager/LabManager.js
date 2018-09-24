@@ -108,7 +108,7 @@ class LabManager extends Component {
       render() {
             return (
 
-                <LabCard key={this.state.labs.id} items={this.state.labs} facilityname={this.state.facilityname}/>
+                <LabCard key={this.state.labs.id} items={this.state.labs} facilityname={this.state.facilityname} />
 
             )
         }

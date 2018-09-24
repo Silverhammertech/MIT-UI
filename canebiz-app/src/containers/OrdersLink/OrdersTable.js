@@ -359,7 +359,7 @@ const rows = [ {
 
 function OrdersTable(props) {
   const { classes } = props;
-render() 
+
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -393,7 +393,7 @@ render()
                 <CustomTableCell numeric>{row.status}</CustomTableCell>
                 <CustomTableCell numeric>{row.customer}</CustomTableCell>
                 <CustomTableCell numeric>{row.shipaddress}</CustomTableCell>
-                <CustomTableCell numeric>{((orderitem1.unitprice * orderitem1.units * 1.1) + (orderitem2.unitprice * orderitem2.units * 1.1) +(orderitem3.unitprice * orderitem3.units * 1.1) +(orderitem4.unitprice * orderitem4.units * 1.1) +(orderitem5.unitprice * orderitem5.units * 1.1) )}</CustomTableCell>
+                <CustomTableCell numeric>{((row.orderitem1.unitprice * row.orderitem1.units * 1.1) + (row.orderitem2.unitprice * row.orderitem2.units * 1.1) +(row.orderitem3.unitprice * row.orderitem3.units * 1.1) +(row.orderitem4.unitprice * row.orderitem4.units * 1.1) +(row.orderitem5.unitprice * row.orderitem5.units * 1.1) )}</CustomTableCell>
                 <CustomTableCell numeric>{row.orderitem1.plant}</CustomTableCell>
                 <CustomTableCell numeric>{row.orderitem1}</CustomTableCell>
                 <CustomTableCell numeric>{row.orderitem2.plant}</CustomTableCell>

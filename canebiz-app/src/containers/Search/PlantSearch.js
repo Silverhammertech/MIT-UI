@@ -39,6 +39,12 @@ const styles = theme => ({
   cardGrid: {
     padding: `${theme.spacing.unit * 8}px 0`,
   },
+
+  paper: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
 });
     
 class PlantSearch extends Component {
@@ -207,7 +213,6 @@ class PlantSearch extends Component {
  performEffectsSearch(element) {
      //Create search elements to be rendered = start will all
      let result = true;  
-     let proceed = false;
      // Check to see if we need to validate effects in search
      console.log(element);
      console.log(this.state.searchcriteria);
@@ -255,58 +260,7 @@ class PlantSearch extends Component {
     return ( result )
      }
 
-       // This search will be part of API or search engine in PRODUCTION
- performMedicalSearch(element) {
-  //Create search elements to be rendered = start will all
-  let result = true;  
-
-  // Check to see if we need to validate effects in search
-  console.log(element);
-  console.log(this.state.searchcriteria);
-
-  if ((this.state.searchcriteria[5]) && result)
-  {
-    // We need to explore value of Stress because checkbox is selected
-    if (element.Stress <=5) {
-       result = false;
-    }
-  }
  
-  if ((this.state.searchcriteria[6]) && result)
-  {
-    // We need to explore value of Depression because checkbox is selected
-    if (element.Depression <= 5) {
-       result = false;
-    }
-  }
-
-  if ((this.state.searchcriteria[7]) && result)
-  {
-    // We need to explore value of Pain because checkbox is selected
-    if (element.Pain <= 5) {
-       result = false;
-    }
-  }
-
-  if ((this.state.searchcriteria[7]) && result)
-  {
-    // We need to explore value of Fatigue because checkbox is selected
-    if (element.Fatigue <= 5) {
-       result = false;
-    }
-  }
-
-  if ((this.state.searchcriteria[9]) && result)
-  {
-    // We need to explore value of Appetite Loss because checkbox is selected
-    if (element.AppetiteLoss <= 5) {
-       result = false;
-    }
-  }
-  console.log(result);
- return ( result )
-  }
-
        // This search will be part of API or search engine in PRODUCTION
  performMedicalSearch(element) {
   //Create search elements to be rendered = start will all
@@ -372,7 +326,7 @@ class PlantSearch extends Component {
         if ((this.state.searchcriteria[10]) && result)
         {
           // We need to explore value of Dry Mouth because checkbox is selected
-          if (element.DryMouth <=5) {
+          if (element.DryMouth <=3) {
              result = false;
           }
         }
@@ -380,7 +334,7 @@ class PlantSearch extends Component {
         if ((this.state.searchcriteria[11]) && result)
         {
           // We need to explore value of Dry Eyes because checkbox is selected
-          if (element.DryEyes <= 5) {
+          if (element.DryEyes <= 3) {
              result = false;
           }
         }
@@ -388,7 +342,7 @@ class PlantSearch extends Component {
         if ((this.state.searchcriteria[12]) && result)
         {
           // We need to explore value of Dizzy because checkbox is selected
-          if (element.Dizzy <= 5) {
+          if (element.Dizzy <= 3) {
              result = false;
           }
         }
@@ -396,7 +350,7 @@ class PlantSearch extends Component {
         if ((this.state.searchcriteria[13]) && result)
         {
           // We need to explore value of Paranoia because checkbox is selected
-          if (element.Paranoidranoid <= 5) {
+          if (element.Paranoidranoid <= 3) {
              result = false;
           }
         }
@@ -404,7 +358,7 @@ class PlantSearch extends Component {
         if ((this.state.searchcriteria[14]) && result)
         {
           // We need to explore value of Headache because checkbox is selected
-          if (element.Headache <= 5) {
+          if (element.Headache <= 3) {
              result = false;
           }
         }
@@ -623,7 +577,7 @@ class PlantSearch extends Component {
 
         </Grid>
         <Paper className={classes.control}>
-<Grid container justify='center' >  
+        <Grid container spacing={24}  >  
                 <Grid item xs={12}>
           <Card className={classes.card}><SearchTable key={this.state.matches.plantid} items={this.state.matches}/></Card>
         </Grid>

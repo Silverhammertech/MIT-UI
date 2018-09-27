@@ -65,7 +65,6 @@ class CanaChat extends Component {
         );
     }
 }
-
 class MessageList extends Component {
     render() {
         return (

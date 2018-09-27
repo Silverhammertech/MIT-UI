@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import Layout from '../../components/Layout/Layout';
-import WeedProductCard from '../../components/Cultivator/WeedProductCard/WeedProductCard';
+import ProductCards from '../../components/ProductCards/ProductCards';
 
 
 
@@ -11,10 +11,8 @@ class DistributionFacilityPage extends Component {
         return (
             
                 <Layout name="Cultivator" >
-                
-
-
-            
+                        
+                        <ProductCards/>
 
               </Layout>
             

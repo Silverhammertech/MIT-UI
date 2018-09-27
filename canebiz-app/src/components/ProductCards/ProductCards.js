@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import axios from '../../axios-weedprod';
 import ProductCard from '..//ProductCard/ProductCard';
+import spinner from '../UI/Spinner/Spinner';
 import uuid from 'uuid';
 
   
@@ -11,6 +12,7 @@ import uuid from 'uuid';
 class ProductCards extends Component {
  
         state = {
+            loading: false,
         prods: [
             {
                 plantid: 10000,
@@ -35,6 +37,7 @@ class ProductCards extends Component {
     
                 console.log(res.data);
                 this.setState( { prods: res.data} );
+                this.setState.loading = false;
 
             } )
             .catch( error => {
@@ -44,9 +47,10 @@ class ProductCards extends Component {
     }
 
       render() {
+        const { prods, loading } = this.state;
             return (
 
-                <ProductCard key={this.state.prods.name} items={this.state.prods} />
+                {loading ? <spinner /> : <ProductCard key={this.state.prods.name} items={this.state.prods} />
 
             )
         }

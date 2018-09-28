@@ -1,9 +1,7 @@
-
-
 import React, { Component } from 'react';
 import axios from '../../axios-weedprod';
 import ProductCard from '..//ProductCard/ProductCard';
-import spinner from '../UI/Spinner/Spinner';
+import Spinner from '../UI/Spinner';
 import uuid from 'uuid';
 
   
@@ -12,26 +10,14 @@ import uuid from 'uuid';
 class ProductCards extends Component {
  
         state = {
-            loading: false,
-        prods: [
-            {
-                plantid: 10000,
-                name: "1024",
-                introduction: "1024 is a sativa-dominant hybrid bred in Spain by Medical Seeds Co",
-                img: "../../assets/images/1024.jpg",
-                data: {
-                    category: "Hybrid",
-                    indica: 10,
-                    sativa: 90
-                },
-                price: "$20"
-            }
-        ]
+            
+        prods: [],
+        loading: false
         
     }
 
     componentDidMount () {
-
+        this.setState({ loading: true }, () => {
         axios.get( 'https://mit-location-svc.cfapps.io/api/v1/other-product')
             .then( res => {
     
@@ -42,17 +28,18 @@ class ProductCards extends Component {
             } )
             .catch( error => {
                 console.log( error );
+                this.setState.loading = false;
                 // this.setState({error: true});
-            } );
-    }
+            } );}
+        );}
 
       render() {
         const { prods, loading } = this.state;
             return (
-
-                {loading ? <spinner /> : <ProductCard key={this.state.prods.name} items={this.state.prods} />
-
-            )
+<div>
+                {loading ? <Spinner /> : <ProductCard key={this.state.prods.name} items={this.state.prods} />} 
+</div>
+            );
         }
     }
 

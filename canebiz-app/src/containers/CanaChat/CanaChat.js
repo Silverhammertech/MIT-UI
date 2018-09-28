@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Chatkit from '@pusher/chatkit';
-import classes from './ChatStyle.css';
-
+import classes from './CanaChat.css';
 
 /* Replace these with your own API keys, username and roomId from Chatkit  */
 const testToken = "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/068e21f6-abc8-4796-887b-a0a50f77cf60/token"
@@ -54,7 +53,7 @@ class CanaChat extends Component {
     
     render() {
         return (
-            <div className="classes.app" >
+            <div className="classes.App" >
               <Title />
               <MessageList 
                   roomId={this.state.roomId}
@@ -68,10 +67,10 @@ class CanaChat extends Component {
 class MessageList extends Component {
     render() {
         return (
-            <ul className="classes.message-list" >
+            <ul className="classes.Message-list" >
                 {this.props.messages.map((message, index) => {
                     return (
-                      <li  key={message.id} className="classes.message">
+                      <li  key={message.id} className="classes.Message">
                         <div>{message.senderId}</div>
                         <div>{message.text}</div>
                       </li>
@@ -110,7 +109,7 @@ class SendMessageForm extends Component {
         return (
             <form
                 onSubmit={this.handleSubmit}
-                className="classes.send-message-form">
+                className="classes.Send-message-form">
                 <input
                     onChange={this.handleChange}
                     value={this.state.message}
@@ -122,7 +121,7 @@ class SendMessageForm extends Component {
 }
 
 function Title() {
-  return <p className="classes.title">Canebiz CanaChat App</p>
+  return <p className="classes.Title">Canebiz CanaChat App</p>
 }
 
 ReactDOM.render(<CanaChat />, document.getElementById('root'));

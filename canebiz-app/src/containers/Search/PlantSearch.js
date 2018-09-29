@@ -18,10 +18,9 @@ import SearchTable from './SearchTable';
 
 const styles = theme => ({
   root: {
-    display: 'flex',
-    position: 'relative',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
 
   },
   formControl: {
@@ -40,11 +39,6 @@ const styles = theme => ({
     padding: `${theme.spacing.unit * 8}px 0`,
   },
 
-  paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
 });
     
 class PlantSearch extends Component {
@@ -419,7 +413,7 @@ class PlantSearch extends Component {
               Plant Search
         </Typography>
         <Grid item xs={12} >
-          <Paper className={classes.control}>
+          <Paper className={classes.root}>
             <Grid container justify='space-evenly' >
               <Grid item>
                 <Card >
@@ -576,10 +570,10 @@ class PlantSearch extends Component {
 
 
         </Grid>
-        <Paper className={classes.control}>
+        <Paper className={classes.root}>
         <Grid container spacing={24}  >  
                 <Grid item xs={12}>
-          <Card className={classes.card}><SearchTable key={this.state.matches.plantid} items={this.state.matches}/></Card>
+          <Card ><SearchTable key={this.state.matches.plantid} items={this.state.matches}/></Card>
         </Grid>
         </Grid>
         </Paper>

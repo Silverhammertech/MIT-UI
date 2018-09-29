@@ -34,7 +34,7 @@ class ProductCards extends Component {
         );}
 
       render() {
-        const { prods, loading } = this.state;
+        const { prods, loading} = this.state;
             return (
 <div>
                 {loading ? <Spinner /> : <ProductCard key={this.state.prods.name} items={this.state.prods} />} 

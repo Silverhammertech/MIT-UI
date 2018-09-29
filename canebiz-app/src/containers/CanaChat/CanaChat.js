@@ -124,7 +124,7 @@ function Title() {
   return <p className="classes.Title">Canebiz CanaChat App</p>
 }
 
-ReactDOM.render(<CanaChat />, document.getElementById('root'));
+//ReactDOM.render(<CanaChat />, document.getElementById('root'));
 
 export default CanaChat;
 

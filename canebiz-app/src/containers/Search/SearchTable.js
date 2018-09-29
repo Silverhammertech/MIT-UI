@@ -602,7 +602,7 @@ class SearchTable extends React.Component {
                       <TableCell numeric>{n.medicinalusedata.Depression}</TableCell>
                       <TableCell numeric>{n.medicinalusedata.Pain}</TableCell>
                       <TableCell numeric>{n.medicinalusedata.Fatigue}</TableCell>
-                      <TableCell numeric>{n.medicinalusedata.Appetiteloss}</TableCell>
+                      <TableCell numeric>{n.medicinalusedata.AppetiteLoss}</TableCell>
 
                     </TableRow>
 

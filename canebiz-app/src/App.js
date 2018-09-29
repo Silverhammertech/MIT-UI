@@ -31,7 +31,7 @@ class App extends Component {
                             <Route path="/cultivatorsdash" exact component={CultivatorDashboard} />
                             <Route path="/manufacturers" exact component={ManufacturerFacilityPage} />
                             <Route path="/distributors" exact component={DistributionFacilityPage} />
-                            <Route path="/dispensariess" exact component={DispensaryFacilityPage} />
+                            <Route path="/dispensaries" exact component={DispensaryFacilityPage} />
                             <Route path="/plantsearch" exact component={PlantSearch} />
                             <Route path="/canebizNexus" exact component={CanebizNexus} />
                             <Route path="/plantcatalog" exact component={PlantCatalog} />

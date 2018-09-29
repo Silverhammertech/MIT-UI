@@ -10,7 +10,7 @@ class DistributionFacilityPage extends Component {
     render () {
         return (
             
-                <Layout name="Cultivator" >
+                <Layout name="Distribution" >
                         
                         <ProductCards/>
 

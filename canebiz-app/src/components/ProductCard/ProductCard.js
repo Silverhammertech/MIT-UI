@@ -77,7 +77,7 @@ function ProductCard(props) {
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
             <Typography variant="display3" align="center" color="textPrimary" gutterBottom>
-              Plant Catalog
+              Product Catalog
             </Typography>
             <Typography variant="title" align="center" color="textSecondary" paragraph>
               Please browse below to see the Productsts we currently have in stock for all your recreational and medicinal purposes.
@@ -104,7 +104,11 @@ function ProductCard(props) {
             {cards.map(card => (
               <Grid item key={cards.name} sm={6} md={4} lg={3}>
                 <Card className={classes.card}>
-
+                <CardMedia
+                    className={classes.cardMedia}
+                    image='../../assets/images/Marijuana-Leaf-Green.png'
+                    title="Product Image to be added"
+                        />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="headline" component="h2">
                     {card.name}

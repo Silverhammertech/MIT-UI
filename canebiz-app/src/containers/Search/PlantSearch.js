@@ -559,7 +559,9 @@ class PlantSearch extends Component {
                   </Card>
               </Grid>
             </Grid>
-
+            </Paper>
+            
+            <Paper className={classes.root}>
             <Grid container justify='center' toppadding='50px'>
             <Grid item > 
                                   <Button variant="outlined" color="primary" onClick={ () => this.manageSearch(1)}>

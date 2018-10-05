@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+
 import Chatkit from '@pusher/chatkit';
 import classes from './CanaChat.css';
 
@@ -53,7 +53,7 @@ class CanaChat extends Component {
     
     render() {
         return (
-            <div className="classes.App" >
+            <div className={classes.App} >
               <Title />
               <MessageList 
                   roomId={this.state.roomId}
@@ -67,10 +67,10 @@ class CanaChat extends Component {
 class MessageList extends Component {
     render() {
         return (
-            <ul className="classes.Message-list" >
+            <ul className={classes.messagelist} >
                 {this.props.messages.map((message, index) => {
                     return (
-                      <li  key={message.id} className="classes.Message">
+                      <li  key={message.id} className={classes.Message}>
                         <div>{message.senderId}</div>
                         <div>{message.text}</div>
                       </li>
@@ -109,7 +109,7 @@ class SendMessageForm extends Component {
         return (
             <form
                 onSubmit={this.handleSubmit}
-                className="classes.Send-message-form">
+                className={classes.Sendmessageform}>
                 <input
                     onChange={this.handleChange}
                     value={this.state.message}
@@ -121,10 +121,9 @@ class SendMessageForm extends Component {
 }
 
 function Title() {
-  return <p className="classes.Title">Canebiz CanaChat App</p>
+  return <p className={classes.Title}>Canebiz CanaChat App</p>
 }
 
-//ReactDOM.render(<CanaChat />, document.getElementById('root'));
 
 export default CanaChat;
 

@@ -1,9 +1,9 @@
 :root {
-    --main-color: #3e5869;
+    --main-color: rgb(117, 125, 238);
     --secondary-color: #eef0f1;
-    --main-text-color: #d41616;
+    --main-text-color: black;
     --secondary-text-color: #b0c7d6;
-    --send-message-form: rgb(255, 145, 0);
+    --send-message-form: rgb(235, 213, 186);
     --message-background: rgb(55, 0, 255);
 }
 
@@ -34,7 +34,8 @@ html, body {
     color: var(--secondary-color);
     background: var(--main-color);
     box-sizing: border-box;
-    margin: 0;
+    margin-left: 200px;
+    margin-right: 200px;
     padding: 0;
     text-align: center;
 }
@@ -48,6 +49,7 @@ html, body {
     color: var(--main-text-color);
     opacity: 0.9;
     margin-bottom: 6px;
+    margin-left: 200px;
 }
 .Message div:nth-child(2) {
     background: var(--message-background);
@@ -55,6 +57,7 @@ html, body {
     display: inline;
     padding: 4px 8px;
     border-radius: 8px;
+    margin-left: 250px;
 }
 
 .Messagelist {
@@ -72,6 +75,8 @@ html, body {
     display: flex;
     box-sizing: border-box;
     height: 60px;
+    margin-left: 200px;
+    margin-right: 200px;
 
 }
 

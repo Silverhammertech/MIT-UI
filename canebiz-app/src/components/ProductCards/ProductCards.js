@@ -23,21 +23,27 @@ class ProductCards extends Component {
     
                 console.log(res.data);
                 this.setState( { prods: res.data} );
-                this.setState.loading = false;
+                this.setState({
+                    loading: false
+                  });
+             
 
             } )
             .catch( error => {
                 console.log( error );
-                this.setState.loading = false;
-                // this.setState({error: true});
+                this.setState({
+                    loading: false
+                  });
             } );}
         );}
 
       render() {
-        const { prods, loading} = this.state;
+        const prods = this.state.prods;
+        const loading = this.state.loading;
+
             return (
 <div>
-                {loading ? <Spinner /> : <ProductCard key={this.state.prods.name} items={this.state.prods} />} 
+                {loading ? <Spinner /> : <ProductCard key={prods.name} items={prods} />} 
 </div>
             );
         }

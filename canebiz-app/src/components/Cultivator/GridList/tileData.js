@@ -5,7 +5,7 @@ const tileData = [
         img: "../../../assets/images/iStock503076890.jpg",
         title: 'Cultivators',
         author: 'Scott',
-        to: './cultivators',
+        to: './cultivatorsdash',
         name: "Cultivator",
         cols: 2,
         featured: true,

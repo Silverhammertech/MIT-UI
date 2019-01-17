@@ -18,7 +18,7 @@ class ProductCards extends Component {
 
     componentDidMount () {
         this.setState({ loading: true }, () => {
-        axios.get( 'https://mit-location-svc.cfapps.io/api/v1/other-product')
+        axios.get( 'https://mit-location-svc.mybluemix.net/api/v1/other-product')
             .then( res => {
     
                 console.log(res.data);

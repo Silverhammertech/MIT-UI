@@ -107,7 +107,7 @@ class FindBusinesses extends Component {
 
     componentDidMount () {
 
-        axios.get( 'https://mit-location-svc.cfapps.io/api/v1/near?long=-118.291209&lat=33.957239&radius=100000' )
+        axios.get( 'https://mit-location-svc.mybluemix.net/api/v1/near?long=-118.291209&lat=33.957239&radius=100000' )
             .then( res => {
                 const rows = res.data;
                 console.log(res.data);
